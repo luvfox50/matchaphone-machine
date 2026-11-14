@@ -46,3 +46,14 @@ html[data-chacha-home-recovery=true],html[data-chacha-home-recovery=true] body,h
 html[data-chacha-theme=dark] .phone.pwa-home-layout-v5-recovery.native-mobile-viewport .cha-home.pwa-home-image-wallpaper .desktop-footer-stack .cha-dock{background:#191a20b8!important;border-color:#ffffff26!important}
 }
 html[data-chacha-home-recovery=true],html[data-chacha-home-recovery=true] body,html[data-chacha-home-recovery=true] #root,html[data-chacha-home-recovery=true] .stage,html[data-chacha-home-recovery=true] .phone.pwa-home-layout-v5-recovery,html[data-chacha-home-recovery=true] .phone.pwa-home-layout-v5-recovery>.screen{background-color:var(--chacha-page-background,#f7f6f5);background-image:var(--chacha-canvas-image,none);background-position:center;background-repeat:no-repeat;background-size:cover}
+
+/* PhoneCheckPage 适配，防止底部按钮被屏幕截断，支持滚动，避开底部安全区 */
+.phone-check-page {
+  min-height: 100vh;
+  height: auto !important;
+  overflow-y: auto;
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+.phone-app-grid {
+  flex-wrap: wrap;
+}
